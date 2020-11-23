@@ -1,0 +1,21 @@
+{% extends "_templates/base.njk" %}
+
+{% block content %}
+<article>
+  <h1>Discography</h1>
+  <p>blah blah blah (will be replaced later)</p>
+  <div class="row">
+    {% for albums in queen.discography %}
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <h5 class="card-title">album title</h5>
+        <p class="card-text">year</p>
+      </div>
+    </div>
+  </div>
+    {% endfor %}
+</div>
+</article>
+{% endblock %}
