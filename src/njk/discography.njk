@@ -2,16 +2,18 @@
 
 {% block content %}
 <article>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Raleway&display=swap" rel="stylesheet">
   <h1>Discography</h1>
   <p>blah blah blah (will be replaced later)</p>
   <div class="row">
-    {% for albums in queen.discography %}
-  <div class="col-sm-6">
-    <div class="card">
+    {% for discography in queen.discography %}
+  <div class="col-sm-6 col-md-4">
+    <div class="card border-secondary">
       <div class="card-body">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <h5 class="card-title">album title</h5>
-        <p class="card-text">year</p>
+        <img src="../img/discs/{{ discography.image }}" alt="." class="img-thumbnail">
+        <h5 class="card-title">{{ discography.title }}</h5>
+        <p class="card-text">{{ discography.year }}</p>
       </div>
     </div>
   </div>
