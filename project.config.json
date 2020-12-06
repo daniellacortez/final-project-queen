@@ -23,6 +23,14 @@
       "array": "books",
       "slug": "slug",
       "path": "books"
-    }
+    },
+      {
+        "template": "bake-freddie",
+        "data": "queen",
+        "array": "members",
+        "slug": "slug",
+        "path": "members"
+      }
   ]
 }
+

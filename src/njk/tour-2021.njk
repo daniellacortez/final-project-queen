@@ -1,0 +1,29 @@
+{% extends "_templates/base.njk" %}
+
+{% block page_title %}Tour 2021{% endblock %}
+
+{% block content %}
+<article class="container">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Raleway&display=swap" rel="stylesheet">
+  <h1 class="text-center">Tour 2021</h1>
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">City</th>
+      <th scope="col">Venue</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for tour2021 in queen.tour2021 %}
+    <tr>
+      <th scope="row">{{ tour2021.date }}</th>
+      <td>{{ tour2021.city }}</td>
+      <td>{{ tour2021.venue }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</article>
+{% endblock %}

@@ -1,5 +1,6 @@
 {% extends '_templates/base.njk' %}
 {% set relative_path = "../" %}
+{% from '_macros/prose.njk' import prose %}
 
 {% block page_title %}{{ name }}{% endblock %}
 
@@ -7,14 +8,21 @@
 
 {% block content %}
 <article class="container">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Raleway&display=swap" rel="stylesheet">
   <div class="row">
     <div class="col">
-      <img src="../img/{{ members.image }}" alt="." class="img-fluid">
+      <img src="../img/members/{{ image }}" class="img-fluid" alt="Responsive image">
       <p class="byline">{{ members.instruments }}</p>
     </div>
     <div>
       <h1>{{ name }}</h1>
+      <h3>Intruments: {{ instruments }}</h3>
+      <h4>Birthday: {{ birthdate }}</h4>
+      <h4>Birth Place: {{ birthplace }}</h4>
+      <h4>Tenure: {{ tenure }}</h4>
       <h3>{{ description | safe }}</h3>
     </div>
   </div>
 </article>
+{% endblock %}

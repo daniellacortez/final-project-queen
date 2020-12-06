@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Raleway&display=swap" rel="stylesheet">
   <h1 class="text-center">Members of the Band</h1>
   <p class="text-align">Before forming Queen, May and Taylor had played together in the band Smile. Mercury was a fan of Smile and encouraged them to experiment with more elaborate stage and recording techniques. He joined in 1970 and suggested the name "Queen." Deacon was recruited in February 1971, before the band released their eponymous debut album in 1973.</p>
-  <a href="https://en.wikipedia.org/wiki/Queen_(band)" target="_blank">Source</a>
+  <a href="https://en.wikipedia.org/wiki/Queen_(band)" target="_blank" class="text-align">Source: Wikipedia</a>
   <div class="card-deck">
     {% for members in queen.members %}
   <div class="card border-secondary">
@@ -16,7 +16,7 @@
     <div class="card-body">
       <h5 class="card-title">{{ members.name }}</h5>
       <p class="card-text">{{ members.instruments }}</p>
-      <a href="#" target="_blank">Find out more</a>
+      <a href="members/{{members.slug}}.html" target="_blank">Find out more</a>
     </div>
   </div>
   {% endfor %}
